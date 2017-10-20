@@ -1,10 +1,14 @@
-h1 {
-  color: purple;
-}
+body {
+  background: #2c3e50; }
 
+.sidebar {
+  background: white;
+  height: 100vh; }
 
-p {
-  text-align: justify;
-  width: 500px;
-  color: blue;
-}
+#home span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: #95a5a6; }
+
+/*# sourceMappingURL=app.css.map */
