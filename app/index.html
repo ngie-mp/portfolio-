@@ -16,11 +16,16 @@
 </head>
 <body>
   <div ng-controller="mainCtrl">
-    <md-toolbar class="md-warn"><div class="md-toolbar-tools"><a href="#!/">{{message}}</a></div></md-toolbar>
-
-    <ng-view>
-
-    </ng-view>
+    <md-sidenav md-component-id="left" class="md-sidenav-left">
+      Left Nav!
+    </md-sidenav>
+    <md-content>
+      Center Content
+     <md-button ng-click="openLeftMenu()">
+       Open Left Menu
+     </md-button>
+    </md-content>
+    <ng-view></ng-view>
     <md-button ng-href="#!/next">next</md-button>
   </div>
 </body>

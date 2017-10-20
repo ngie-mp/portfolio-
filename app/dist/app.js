@@ -82,15 +82,16 @@ var _swRegister = __webpack_require__(2);
 
 var _swRegister2 = _interopRequireDefault(_swRegister);
 
+var _mainController = __webpack_require__(3);
+
+var _mainController2 = _interopRequireDefault(_mainController);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = angular.module('gapp', ['ngRoute', 'ngMaterial']);
 
-app.controller('mainCtrl', function ($scope) {
-  $scope.message = "Routes";
-});
-
 app.config(_routeConfig2.default);
+app.controller('mainCtrl', _mainController2.default);
 (0, _swRegister2.default)();
 
 exports.default = app;
@@ -136,7 +137,7 @@ function sw() {
   if ('serviceWorker' in navigator && 'PushManager' in window) {
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('service-worker.js').then(function (registration) {
-        // Registration was successful
+
         function initUI() {
           registration.pushManager.getSubscription().then(function (subscription) {
             if (subscription) {
@@ -147,6 +148,7 @@ function sw() {
             }
           });
         }
+        // Registration was successful
         console.log('ServiceWorker registration successful', registration);
         initUI();
       }).catch(function (err) {
@@ -155,6 +157,24 @@ function sw() {
       });
     });
   }
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = mainCtrl;
+function mainCtrl($scope, $mdSidenav) {
+  $scope.message = "AM";
+  $scope.openLeftMenu = function () {
+    $mdSidenav('left').toggle();
+  };
 }
 
 /***/ })

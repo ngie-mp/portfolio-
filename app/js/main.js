@@ -1,13 +1,11 @@
-import routes from './route-config.js';
-import sw from './sw-register.js';
+import routes from './route-config';
+import sw from './sw-register';
+import mainCtrl from './main-controller'
 
 let app = angular.module('gapp', ['ngRoute', 'ngMaterial']);
 
-app.controller('mainCtrl', function($scope) {
-  $scope.message = "Routes";
-});
-
 app.config(routes);
+app.controller('mainCtrl', mainCtrl);
 sw();
 
 export default app;
