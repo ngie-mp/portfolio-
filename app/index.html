@@ -12,21 +12,23 @@
   <script src="vendor/angular-aria.js"></script>
   <script src="vendor/angular-route.js"></script>
   <script src="dist/app.js"></script>
-  <title>g-unit</title>
+  <title>AM | Portfolio</title>
 </head>
 <body>
   <div ng-controller="mainCtrl">
-    <md-sidenav md-component-id="left" class="md-sidenav-left">
-      Left Nav!
-    </md-sidenav>
-    <md-content>
-      Center Content
-     <md-button ng-click="openLeftMenu()">
-       Open Left Menu
-     </md-button>
-    </md-content>
-    <ng-view></ng-view>
-    <md-button ng-href="#!/next">next</md-button>
-  </div>
+    <div layout="row">
+      <md-sidenav md-component-id="left" class="md-sidenav-left" flex="33">
+        AM
+      </md-sidenav>
+      <div class="sidebar">
+        <md-button ng-click="openLeftMenu()">
+          Open
+        </md-button>
+      </div>
+      <div flex="66">
+        <ng-view></ng-view>
+      </div>
+    </div>
+ </div>
 </body>
 </html>
