@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gapp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendor/angular-material.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="vendor/angular.js"></script>
+  <script src="vendor/angular-animate.js"></script>
+  <script src="vendor/angular-material.js"></script>
+  <script src="vendor/angular-aria.js"></script>
+  <script src="vendor/angular-route.js"></script>
+  <script src="dist/app.js"></script>
+  <title>g-unit</title>
+</head>
+<body>
+  <div ng-controller="mainCtrl">
+    <md-toolbar class="md-warn"><div class="md-toolbar-tools"><a href="#!/">{{message}}</a></div></md-toolbar>
+
+    <ng-view>
+
+    </ng-view>
+    <md-button ng-href="#!/next">next</md-button>
+  </div>
+</body>
+</html>
